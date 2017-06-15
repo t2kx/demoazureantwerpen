@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Azure in Education</title>
+		<style>
+			html, body { background-color: #fff; height: 100%; margin: 0; padding: 0; font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif; }
+			
+			aside { float: left; height: 100%; width: 300px; background-color: #369; outline: 1px solid #ccc; position: relative; }
+				aside .logo { /* background: transparent url(img/mscampus-logo.png) no-repeat top center; background-size: 100%; */ display: block; font-size: 0; height: 200px; width: 200px; position: absolute; left: 50%; top: 1em; margin-left: -100px; }
+				aside .logo img { /* visibility: hidden; */ width: inherit; height: inherit; }
+			#main { margin-left: 300px; }			
+			header { background-color: #eee; color: #555; padding: 2em 2em 1em 2em; }
+			h1 { font-weight: normal; padding: 0; margin: 0; }
+			h2 { font-weight: normal; color: #369; }
+			article { padding: .5em 2em; } 
+			strong { font-weight: bold; color: #369; }
+			hr { border-color: #bbb; border-width: 1px 0 0 0; border-style: solid; position: relative; left: -5%;}
+			
+			.links .link { font-size: 1.1em; position: relative; list-style: none; margin-bottom: 1.5em; }
+			.link::before { content:""; display: block; position: absolute; top: 0; left: -55px; width: 50px; height: 50px; background-image: url(img/icons.png); background-repeat: no-repeat; background-position: -67px -67px; }	
+				#page .file::before { background-position: -67px -67px; }
+				#page .video::before { background-position: -191px -6px; }
+				#page .https::before { background-position: -5px -6px; }
+				#page .help::before, #page .support::before { background-position: -440px -249px; }
+				#page .tag::before { background-position: -66px -130px; }
+				#page .tags::before { background-position: -4px -130px; }
+				#page .download::before { background-position: -192px -69px; }
+				#page .upload::before { background-position: -192px -130px; }
+				#page .alert::before { background-position: -254px -4px; }
+				#page .briefcase::before { background-position:  -315px -6px; }
+				#page .userdata::before { background-position:  -438px -6px; }
+				#page .love::before { background-position:  -439px -67px; }
+				#page .camera::before { background-position:  -377px -67px; }
+				#page .creditcard::before { background-position:  -315px -67px; }
+				#page .laptop::before { background-position:  -253px -67px; }
+				#page .book::before { background-position:  -129px -67px; }
+				#page .homecloud::before { background-position:  -6px -67px; }
+				#page .slides::before { background-position:  -6px -251px; }
+				
+			.links .link a { position: relative; top: .3em; font-size: .7em; color: #369; display: block; line-height: 1em;}
+
+			.listing { width: 92%; }
+			.listing div { background-color: #eee; padding: .1em; padding-left: 2em; }
+			.listing ul { padding: 0; font-size: .9em; color: #666; }
+			.listing li { margin: 0.5em 0; }
+			.listing li a { text-decoration: none; color: #666; }
+			.listing li a:hover { text-decoration: underline; color: #369; }
+					
+			.download { font-size: .8em; clear: both; display: block; text-align: center; }
+			.button { background-color: #369; padding: .5em 1em; margin: .5em 0; border-radius: 1em; color: #fff; text-decoration: none; text-transform: uppercase; font-weight: normal; font-size: 1.6em; margin: 1em 0; }
+			
+			footer { padding: 1em 2em; position: fixed; bottom: 0; right: 0; font-size: .9em; background-color: #fff; opacity: .4; }
+			footer:hover { opacity: 1; }
+			
+			
+			aside { background: #fff url(img/bg-commons.jpg) no-repeat center; background-position: fixed; position: fixed; background-size: auto 100%; }
+
+			/* media queries for responsive scaling */
+						
+			@media screen {
+			/* all screens */
+				#main { position: relative; height: 100%; }
+				.content { float: left; }
+				.listing { float: right; width: 30%; margin: 2em 3em 2em 1em; }
+			}
+			@media screen and (max-width: 1280px) {
+			/* medium screen landscape */		
+				.content, .listing { float: none; width: auto; }	
+				footer { position: relative; }			
+			}
+			
+			@media screen and (max-width: 768px) {
+			/* medium screen portrait  */
+				aside { float: none; height: 200px; width: 100%; position: relative; background-size: 100% auto; outline: none; background-color:  #eee; }	
+				aside .logo { height: inherit; }
+				aside .logo img { height: inherit; width: auto; }	
+				#main { margin: 0; }
+				header, footer { text-align: center; }	
+			}
+			
+			@media screen and (max-width: 480px) {
+			/* small screen landscape */
+				aside { height: 80px; }
+				aside .logo { left: 0; margin: 0; }
+				ul.links { padding: 0; }	
+				ul.links .link { list-style: disc; }			
+				.link::before { content: none; }
+				header { padding: 1em 0; }
+				header h1 { font-size: 1em; }	
+			}		
+		
+		</style>
+	</head>
+	<body id="page">
+		<aside>
+			<a class="logo"><img src="img/logo-redmond.png" alt="" class="logo" /></a>
+		</aside>
+		<section id="main">
+			<header>
+				<h1>Welkom op Campus Redmond</h1>
+			</header>
+			<article class="content">
+
+				<h2>Nuttige links</h2>			
+				<ul class="links">
+					<li class="https link">
+						Azure Portal 
+						<br />
+						<a href="http://portal.azure.com">
+										portal.azure.com
+						</a>
+					</li>
+					<li class="form link">
+						Aanvraagformulier Student Azure Passes voor leerkracht
+						<br />
+						<a href="http://aka.ms/bestudentazure/">
+							            aka.ms/bestudentazure/
+						</a>
+					</li>
+					<li class="creditcard link">
+						Een Azure Student Pass activeren 
+						<br />
+						<a href="https://www.dreamspark.com/Product/Product.aspx?productid=99">
+										 www.dreamspark.com/Product/Product.aspx?productid=99
+						</a>
+					</li>
+					<li class="video link">
+						Walkthrough: hoe een Azure Student Pass activeren 
+						<br />
+						<a href="http://channel9.msdn.com/Blogs/BeLux-Student/Activating-your-Azure-Student-Submission-NL">
+										channel9.msdn.com/Blogs/BeLux-Student/Activating-your-Azure-Student-Submission-NL
+						</a>
+					</li>
+					<li class="slides link">
+						Slides bij deze sessie 
+						<br />
+						<a href="http://azureinedu.azurewebsites.net/AzureInEdu.pptx">
+										azureinedu.azurewebsites.net/AzureInEdu.pptx
+						</a>
+					</li>
+				</ul>
+
+				<br />
+				
+				<h2>Hands-on-Lab</h2>								
+				
+				<ul class="links">
+					<li class="handsonlab link">
+						MySQL op Microsoft Azure<br />
+						<a href="https://azure.microsoft.com/nl-nl/documentation/articles/web-sites-php-mysql-deploy-use-ftp/">
+										 azure.microsoft.com/nl-nl/documentation/articles/web-sites-php-mysql-deploy-use-ftp/
+						</a>
+					</li>
+					<li class="handsonlab link">
+						Web Essentials: Browser Link<br />
+						<a href="http://www.asp.net/visual-studio/overview/2013/using-browser-link">
+										www.asp.net/visual-studio/overview/2013/using-browser-link
+						</a>
+					</li>
+					<li class="handsonlab link">
+						Project Westmister – Hosted Web Apps<br />
+						<a href="http://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm">
+										microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm
+						</a>
+					</li>
+				</ul>
+				
+			</article>
+			<article class="listing">
+				<h2>Extra info</h2>
+				<div>	
+					<ul class="links">
+						<li>
+							<a href="https://channel9.msdn.com/Blogs/BeLux-Student/Web-App-publiceren-met-Azure">
+								Web App publiceren met Azure (video)
+							</a>
+						</li>
+						<li>
+							<a href="https://blogs.msdn.microsoft.com/belux/2015/10/05/wordpress-site-aanmaken-via-microsoft-azure/">
+								Wordpress website maken met Azure (blogpost)
+							</a>
+						</li>
+						<li>
+							<a href="https://channel9.msdn.com/Blogs/BeLux-Student/Wordpress-website-maken-met-Azure">
+								Wordpress website maken met Azure (video)
+							</a>
+						</li>
+					</ul>
+					<hr />
+					<ul class="links">
+						<li>
+							<a href="https://channel9.msdn.com/Series/Free-Cloud-for-Students/Activating-a-Free-Azure-DreamSpark-Subscription">
+								Activating a Free Azure DreamSpark Subscription (video)
+							</a>
+						</li>
+						<li>
+							<a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-get-started/">
+								Creating an Azure web site
+							</a>
+						</li>
+						<li>
+							<a href="https://channel9.msdn.com/Series/Free-Cloud-for-Students/Creating-a-WordPress-Website-on-Azure">
+								Creating a WordPress Website on Azure (video)
+							</a>
+						</li>
+						<li>
+							<a href="https://channel9.msdn.com/Series/Free-Cloud-for-Students/Creating-a-MySQL-Database-on-Azure">
+								Creating a MySQL Database on Azure (video)
+							</a>
+						</li>
+						<li>
+							<a href="https://channel9.msdn.com/Series/Free-Cloud-for-Students/Incorporate-Application-Insights-into-a-JavaScript-Web-App">
+								Incorporate Application Insights into a JavaScript Web App (video)
+							</a>
+						</li>
+					</ul>
+					<hr />
+					<ul class="links">
+						<li>
+							<a href="http://azure.microsoft.com/en-us/updates/">
+								All Azure Service updates in one place.
+							</a>
+						</li>
+						<li>
+							<a href="http://weblogs.asp.net/scottgu/Tags/Azure">
+								Content by ScottGu (tagged with Azure)
+							</a>
+						</li>
+						<li>
+							<a href="http://www.azurespeed.com/">
+								Azure speed test
+							</a>
+						</li>
+					</ul>	
+				</div>
+				<br />
+				<span class="download">
+					<a class="button" href="./AzureInEdu.zip">download</a> <br /><br />
+					deze pagina als template in .zip-formaat
+				</span>
+			</article>
+			<footer>
+				This webpage is a <strong>Microsoft Azure Web App</strong> ;)
+			</footer>
+		</section>
+	</body>    
+</html>
